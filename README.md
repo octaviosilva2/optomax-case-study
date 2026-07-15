@@ -6,6 +6,17 @@
 
 ## English
 
+## Project snapshot
+
+| Item | Information |
+|---|---|
+| **Status** | Portfolio snapshot — live product in production since May 2026 |
+| **My role** | Product, validation, go-to-market and selected implementation |
+| **Collaboration** | With a technical partner |
+| **Outcome** | Multi-tenant vertical SaaS in production: scheduling, clinical records, PDF prescriptions and recurring billing |
+| **Stack** | Next.js 16 · React 19 · TypeScript · Supabase (Postgres / Auth / RLS) · ASAAS · Resend · Sentry |
+| **Privacy** | Sanitized, history-free snapshot. Real source stays private (patient health data + active billing). No patient data in this repo. |
+
 **B2B SaaS for clinical management in optometry practices** — scheduling, patient
 records, digital prescriptions (PDF) and recurring billing. Multi-tenant: every
 clinic is isolated by `org_id`, enforced with Postgres Row Level Security.
