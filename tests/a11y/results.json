@@ -1,0 +1,697 @@
+{
+  "date": "2026-05-23T18:21:41.036Z",
+  "branch": "feat/identidade-editorial",
+  "totalRoutes": 21,
+  "totalCritical": 0,
+  "totalSerious": 17,
+  "results": [
+    {
+      "route": "01-auth-login",
+      "path": "/login",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white text-[11px] font-semibold select-none bg-avatar-4\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\"><span class=\"h-1.5 w-1.5 rounded-full bg-agenda-agendado shrink-0\"></span>Agendado</span>",
+              "target": [
+                ".bg-agenda-agendado\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "01-auth-check-email",
+      "path": "/login/check-email",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white text-[11px] font-semibold select-none bg-avatar-4\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\"><span class=\"h-1.5 w-1.5 rounded-full bg-agenda-agendado shrink-0\"></span>Agendado</span>",
+              "target": [
+                ".bg-agenda-agendado\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "01-auth-recuperar-senha",
+      "path": "/recuperar-senha",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white text-[11px] font-semibold select-none bg-avatar-4\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\"><span class=\"h-1.5 w-1.5 rounded-full bg-agenda-agendado shrink-0\"></span>Agendado</span>",
+              "target": [
+                ".bg-agenda-agendado\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "01-auth-atualizar-senha",
+      "path": "/atualizar-senha",
+      "violations": []
+    },
+    {
+      "route": "02-editorial-comece",
+      "path": "/comece",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<p class=\"text-sm text-muted-foreground mt-3 leading-relaxed\">O OptoMax é um sistema de gestão clínica feito exclusivamente para optometristas brasileiros. Você está na versão Beta — em fase de validação com profissionais como você.</p>",
+              "target": [
+                ".mt-3"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "02-editorial-em-breve",
+      "path": "/em-breve",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<p class=\"text-sm text-muted-foreground mt-3 max-w-xl mx-auto leading-relaxed\">O OptoMax continua evoluindo. Estamos trabalhando em recursos que vão tornar sua clínica ainda mais eficiente.</p>",
+              "target": [
+                ".mt-3"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<p class=\"text-sm text-muted-foreground text-center mt-10\">Tem uma sugestão? Adoramos ouvir o que falta.<!-- --> <a class=\"text-primary underline hover:no-underline font-medium\" href=\"/contato\">Fale com a gente</a></p>",
+              "target": [
+                ".mt-10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "02-editorial-termos",
+      "path": "/termos",
+      "violations": []
+    },
+    {
+      "route": "02-editorial-privacidade",
+      "path": "/privacidade",
+      "violations": []
+    },
+    {
+      "route": "02-editorial-contato",
+      "path": "/contato",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<p class=\"text-sm text-muted-foreground mt-3 max-w-md mx-auto leading-relaxed\">Estamos disponíveis para tirar dúvidas sobre o OptoMax, resolver problemas ou ouvir sugestões.</p>",
+              "target": [
+                ".mt-3"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<p class=\"text-xs text-muted-foreground text-center mt-8\">Para solicitações relacionadas a dados pessoais (LGPD), utilize o email acima — ele é o canal único do Encarregado.</p>",
+              "target": [
+                ".mt-8"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "02-editorial-conta-excluida",
+      "path": "/conta-excluida",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<a class=\"hover:text-foreground transition-colors\" href=\"/contato\">Falar com a gente</a>",
+              "target": [
+                ".hover\\:text-foreground"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "03-onboarding",
+      "path": "/onboarding",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white text-[11px] font-semibold select-none bg-avatar-4\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\"><span class=\"h-1.5 w-1.5 rounded-full bg-agenda-agendado shrink-0\"></span>Agendado</span>",
+              "target": [
+                ".bg-agenda-agendado\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-dashboard",
+      "path": "/dashboard",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white text-[11px] font-semibold select-none bg-avatar-4\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\"><span class=\"h-1.5 w-1.5 rounded-full bg-agenda-agendado shrink-0\"></span>Agendado</span>",
+              "target": [
+                ".bg-agenda-agendado\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-pacientes",
+      "path": "/pacientes",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".text-muted-foreground\\/70"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<button class=\"h-8 px-3 rounded-lg text-sm font-medium transition-colors bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80\">Hoje</button>",
+              "target": [
+                ".hover\\:bg-muted\\/80.bg-muted.px-3:nth-child(2)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<button class=\"h-8 px-3 rounded-lg text-sm font-medium transition-colors bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80\">Esta semana</button>",
+              "target": [
+                ".hover\\:bg-muted\\/80.bg-muted.px-3:nth-child(3)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<button class=\"h-8 px-3 rounded-lg text-sm font-medium transition-colors bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80\">Este mês</button>",
+              "target": [
+                ".hover\\:bg-muted\\/80.bg-muted.px-3:nth-child(4)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-7 h-7 rounded-full bg-avatar-4 text-white text-[11px] grid place-items-center font-semibold shrink-0\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-7 h-7 rounded-full bg-avatar-3 text-white text-[11px] grid place-items-center font-semibold shrink-0\">PS</div>",
+              "target": [
+                ".bg-avatar-3"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-paciente-detalhe",
+      "path": "/pacientes/9c39f28f-b22e-495b-afca-70d59bffa5ca",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-14 h-14 md:w-16 md:h-16 rounded-full bg-avatar-3 text-white text-base md:text-xl font-bold flex items-center justify-center shrink-0 shadow-md mt-1\">PS</div>",
+              "target": [
+                ".w-14"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
+            },
+            {
+              "html": "<span class=\"px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-[11px] font-semibold\">16</span>",
+              "target": [
+                ".py-0\\.5"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"px-2.5 py-1 rounded-full text-[12px] font-medium border border-black/[0.01] bg-agenda-confirmado/10 dark:bg-agenda-confirmado/20 text-agenda-confirmado\">Confirmado</span>",
+              "target": [
+                ".bg-agenda-confirmado\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.3 (foreground color: #10b981, background color: #e7f8f2, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"px-2.5 py-1 rounded-full text-[12px] font-medium border border-black/[0.01] bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\">Agendado</span>",
+              "target": [
+                ".sm\\:flex-row.sm\\:items-center.p-4:nth-child(2) > .self-end.sm\\:self-auto.ml-auto > .bg-agenda-agendado\\/10.dark\\:bg-agenda-agendado\\/20.text-agenda-agendado"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"px-2.5 py-1 rounded-full text-[12px] font-medium border border-black/[0.01] bg-agenda-agendado/10 dark:bg-agenda-agendado/20 text-agenda-agendado\">Agendado</span>",
+              "target": [
+                ".sm\\:flex-row.sm\\:items-center.p-4:nth-child(3) > .self-end.sm\\:self-auto.ml-auto > .bg-agenda-agendado\\/10.dark\\:bg-agenda-agendado\\/20.text-agenda-agendado"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.5 (foreground color: #0ea5e9, background color: #e7f6fd, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center px-1.5 py-0.2 rounded text-[9px] font-semibold bg-status-warning/10 text-status-warning shrink-0 border border-status-warning/30\">Rápida</span>",
+              "target": [
+                ".p-3\\.5.group.rounded-xl:nth-child(1) > .gap-3.flex.items-center > div:nth-child(2) > .group-hover\\:text-primary.gap-1\\.5.transition-colors > .py-0\\.2.text-\\[9px\\].bg-status-warning\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #d97706, background color: #fbf1e6, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center px-1.5 py-0.2 rounded text-[9px] font-semibold bg-status-warning/10 text-status-warning shrink-0 border border-status-warning/30\">Rápida</span>",
+              "target": [
+                ".p-3\\.5.group.rounded-xl:nth-child(2) > .gap-3.flex.items-center > div:nth-child(2) > .group-hover\\:text-primary.gap-1\\.5.transition-colors > .py-0\\.2.text-\\[9px\\].bg-status-warning\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.85 (foreground color: #d97706, background color: #fbf1e6, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-agenda",
+      "path": "/agenda",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".text-muted-foreground\\/70"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<button class=\"px-3 h-7 text-sm font-medium rounded-md inline-flex items-center gap-1.5 transition-colors text-muted-foreground hover:text-foreground\">",
+              "target": [
+                ".px-3.gap-1\\.5.h-7:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-atendimento-lista",
+      "path": "/atendimento",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-9 h-9 rounded-full bg-avatar-4 text-white text-[12px] font-semibold grid place-items-center shrink-0\">OC</div>",
+              "target": [
+                ".bg-avatar-4"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.52 (foreground color: #ffffff, background color: #ec4899, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-9 h-9 rounded-full bg-avatar-3 text-white text-[12px] font-semibold grid place-items-center shrink-0\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(2) > .md\\:col-span-4.gap-3.col-span-1 > .bg-avatar-3.text-white.w-9"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-9 h-9 rounded-full bg-avatar-3 text-white text-[12px] font-semibold grid place-items-center shrink-0\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(3) > .md\\:col-span-4.gap-3.col-span-1 > .bg-avatar-3.text-white.w-9"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-9 h-9 rounded-full bg-avatar-3 text-white text-[12px] font-semibold grid place-items-center shrink-0\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(4) > .md\\:col-span-4.gap-3.col-span-1 > .bg-avatar-3.text-white.w-9"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-9 h-9 rounded-full bg-avatar-3 text-white text-[12px] font-semibold grid place-items-center shrink-0\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(5) > .md\\:col-span-4.gap-3.col-span-1 > .bg-avatar-3.text-white.w-9"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-status-ok-bg text-status-ok dark:bg-status-ok-bg dark:text-status-ok\">",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(5) > .md\\:col-span-2.col-span-1:nth-child(2) > .bg-status-ok-bg.text-status-ok.dark\\:bg-status-ok-bg"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #10b981, background color: #d1fae5, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-9 h-9 rounded-full bg-avatar-3 text-white text-[12px] font-semibold grid place-items-center shrink-0\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(6) > .md\\:col-span-4.gap-3.col-span-1 > .bg-avatar-3.text-white.w-9"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<span class=\"inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium bg-status-ok-bg text-status-ok dark:bg-status-ok-bg dark:text-status-ok\">",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(6) > .md\\:col-span-2.col-span-1:nth-child(2) > .bg-status-ok-bg.text-status-ok.dark\\:bg-status-ok-bg"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.23 (foreground color: #10b981, background color: #d1fae5, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-atendimento-detalhe",
+      "path": "/atendimento/1b120948-c55c-486d-bbde-63a5887d1df7",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".text-muted-foreground\\/70"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<button class=\"px-3 h-7 text-sm font-medium rounded-md inline-flex items-center gap-1.5 transition-colors text-muted-foreground hover:text-foreground\">",
+              "target": [
+                ".px-3.gap-1\\.5.h-7:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.34 (foreground color: #64748b, background color: #f1f5f9, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-receitas",
+      "path": "/receitas",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold text-white shrink-0 bg-avatar-3\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(1) > .gap-3.md\\:col-span-4.col-span-1 > .bg-avatar-3.text-white.font-semibold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold text-white shrink-0 bg-avatar-3\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(2) > .gap-3.md\\:col-span-4.col-span-1 > .bg-avatar-3.text-white.font-semibold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold text-white shrink-0 bg-avatar-3\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(3) > .gap-3.md\\:col-span-4.col-span-1 > .bg-avatar-3.text-white.font-semibold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<div class=\"w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold text-white shrink-0 bg-avatar-3\">PS</div>",
+              "target": [
+                ".grid-cols-1.md\\:grid-cols-12.py-3\\.5:nth-child(4) > .gap-3.md\\:col-span-4.col-span-1 > .bg-avatar-3.text-white.font-semibold"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.14 (foreground color: #ffffff, background color: #f59e0b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-configuracoes",
+      "path": "/configuracoes",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<button type=\"button\" tabindex=\"0\" data-slot=\"button\" class=\"group/button inline-...\">",
+              "target": [
+                ".bg-destructive\\/10"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.96 (foreground color: #dc2626, background color: #f5e5e7, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "04-app-configuracoes-historico-aceites",
+      "path": "/configuracoes/historico-aceites",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "html": "<span class=\"hidden sm:inline text-[11px] text-muted-foreground/70 font-normal select-none\">Versão Beta</span>",
+              "target": [
+                ".sm\\:inline"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.72 (foreground color: #929dad, background color: #fefefe, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<p class=\"font-medium\">Cadastro anterior à versão <!-- -->v1.0-2026-05-19<!-- --> dos Termos.</p>",
+              "target": [
+                ".border-status-warning\\/30 > div > p:nth-child(1)"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.86 (foreground color: #d97706, background color: #fef3c7, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<p class=\"mt-1\">Sua conta foi criada antes do registro eletrônico de aceite ter sido implementado. A versão vigente atualmente é<!-- --> <strong>v1.0-2026-05-19</strong>, publicada em <!-- -->2026-05-23<!-- -->.</p>",
+              "target": [
+                "div > .mt-1"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.86 (foreground color: #d97706, background color: #fef3c7, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "html": "<strong>v1.0-2026-05-19</strong>",
+              "target": [
+                "strong"
+              ],
+              "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.86 (foreground color: #d97706, background color: #fef3c7, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "05-admin-login",
+      "path": "/admin/login",
+      "violations": []
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Auditoria de cores hardcoded
+# Bloqueia commit se detectar cores da paleta default do Tailwind
+# Para ignorar temporariamente (emergencia): git commit --no-verify
+bash scripts/audit-colors.sh

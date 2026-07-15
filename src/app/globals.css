@@ -1,0 +1,620 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  /* JetBrains Mono para números clínicos (dioptria, AV, PIO) — definido em :root */
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-serif: var(--font-instrument-serif);
+  --font-heading: var(--font-instrument-serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-subtle: var(--primary-subtle);
+  --color-primary-subtle-foreground: var(--primary-subtle-foreground);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* ── Status clínicos V2 — utilitários Tailwind ─────────────────── */
+  --color-status-ok: var(--status-ok);
+  --color-status-warning: var(--status-warning);
+  --color-status-critical: var(--status-critical);
+  --color-status-pending: var(--status-pending);
+  --color-status-info: var(--status-info);
+  --color-status-ok-bg: var(--status-ok-bg);
+  --color-status-warning-bg: var(--status-warning-bg);
+  --color-status-critical-bg: var(--status-critical-bg);
+  --color-status-pending-bg: var(--status-pending-bg);
+  --color-status-info-bg: var(--status-info-bg);
+  --color-destructive-bg: var(--destructive-bg);
+
+  /* ── Status de agenda V2 — utilitários Tailwind ────────────────── */
+  --color-agenda-agendado: var(--agenda-agendado);
+  --color-agenda-confirmado: var(--agenda-confirmado);
+  --color-agenda-em-andamento: var(--agenda-em-andamento);
+  --color-agenda-concluido: var(--agenda-concluido);
+  --color-agenda-cancelado: var(--agenda-cancelado);
+  --color-agenda-faltou: var(--agenda-faltou);
+
+  /* ── Avatar — paleta decorativa (8 cores) ─────────────────────── */
+  --color-avatar-1: var(--avatar-1);
+  --color-avatar-2: var(--avatar-2);
+  --color-avatar-3: var(--avatar-3);
+  --color-avatar-4: var(--avatar-4);
+  --color-avatar-5: var(--avatar-5);
+  --color-avatar-6: var(--avatar-6);
+  --color-avatar-7: var(--avatar-7);
+  --color-avatar-8: var(--avatar-8);
+}
+
+:root {
+  /* ═══════════════════════════════════════════════════════════════════════════
+     Identidade Editorial OptoMax — Light Mode
+     Consolidado da V2 (Fase 10 cleanup)
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  /* ── shadcn semânticos — light ────────────────────────────────── */
+  --background:           oklch(0.985 0.005 80);
+  --foreground:           oklch(0.18 0.01 80);
+  --card:                 oklch(1 0 0);
+  --card-foreground:      oklch(0.18 0.01 80);
+  --popover:              oklch(1 0 0);
+  --popover-foreground:   oklch(0.18 0.01 80);
+  --primary:              oklch(0.32 0.12 280);
+  --primary-foreground:   oklch(0.985 0.005 80);
+  --primary-hover:        oklch(0.38 0.13 280);
+  --primary-subtle:       oklch(0.96 0.02 280);
+  --primary-subtle-foreground: oklch(0.32 0.12 280);
+  --secondary:            oklch(0.94 0.008 80);
+  --secondary-foreground: oklch(0.22 0.01 80);
+  --muted:                oklch(0.95 0.006 80);
+  --muted-foreground:     oklch(0.45 0.01 80);
+  --accent:               oklch(0.72 0.11 80);
+  --accent-foreground:    oklch(0.18 0.01 80);
+  --destructive:          oklch(0.55 0.18 25);
+  --destructive-foreground: oklch(0.985 0.005 80);
+  --border:               oklch(0.90 0.008 80);
+  --input:                oklch(0.90 0.008 80);
+  --ring:                 oklch(0.42 0.13 280);
+  --radius:               6px;
+
+  /* ── Status clínicos — light (WCAG AA 4.5:1) ──────────────────── */
+  --status-ok:            oklch(0.48 0.14 160);
+  --status-warning:       oklch(0.52 0.16 75);
+  --status-critical:      oklch(0.55 0.20 25);
+  --status-pending:       oklch(0.45 0.02 270);
+  --status-info:          oklch(0.48 0.13 230);
+
+  /* ── Status backgrounds sutis — light ─────────────────────────── */
+  --status-ok-bg:         oklch(0.96 0.03 160);
+  --status-warning-bg:    oklch(0.97 0.04 75);
+  --status-critical-bg:   oklch(0.97 0.03 25);
+  --status-pending-bg:    oklch(0.96 0.008 270);
+  --status-info-bg:       oklch(0.96 0.03 230);
+
+  /* ── Destructive background (igual a status-critical-bg) ──────── */
+  --destructive-bg:       oklch(0.97 0.03 25);
+
+  /* ── Status de agenda — light ─────────────────────────────────── */
+  --agenda-agendado:      oklch(0.62 0.14 230);
+  --agenda-confirmado:    oklch(0.58 0.14 160);
+  --agenda-em-andamento:  oklch(0.42 0.14 280);
+  --agenda-concluido:     oklch(0.50 0.02 270);
+  --agenda-cancelado:     oklch(0.55 0.20 25);
+  --agenda-faltou:        oklch(0.70 0.14 75);
+
+  /* ── Radius (editorial = raios pequenos) ──────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  10px;
+  --radius-xl:  14px;
+  --radius-full: 9999px;
+
+  /* ── Shadows editoriais — light ───────────────────────────────── */
+  --shadow-xs: 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.06), 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-md: 0 4px 6px -1px oklch(0 0 0 / 0.08), 0 2px 4px -2px oklch(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px oklch(0 0 0 / 0.10), 0 4px 6px -4px oklch(0 0 0 / 0.08);
+  --shadow-xl: 0 20px 25px -5px oklch(0 0 0 / 0.12), 0 8px 10px -6px oklch(0 0 0 / 0.10);
+
+  /* ── Motion tokens ────────────────────────────────────────────── */
+  --motion-fast:       120ms;
+  --motion-base:       180ms;
+  --motion-slow:       240ms;
+  --motion-deliberate: 320ms;
+  --ease-standard:     cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized:   cubic-bezier(0.3, 0, 0, 1);
+  --ease-decel:        cubic-bezier(0, 0, 0, 1);
+
+  /* ── Tipografia — JetBrains Mono para números clínicos ────────── */
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ── Sidebar (light) ──────────────────────────────────────────── */
+  --sidebar:                 oklch(1 0 0);
+  --sidebar-foreground:      oklch(0.18 0.01 80);
+  --sidebar-primary:         oklch(0.32 0.12 280);
+  --sidebar-primary-foreground: oklch(0.985 0.005 80);
+  --sidebar-accent:          oklch(0.96 0.02 280);
+  --sidebar-accent-foreground: oklch(0.32 0.12 280);
+  --sidebar-border:          oklch(0.90 0.008 80);
+  --sidebar-ring:            oklch(0.42 0.13 280);
+
+  /* ── Charts (paleta alinhada com status) ──────────────────────── */
+  --chart-1: oklch(0.55 0.12 230);
+  --chart-2: oklch(0.55 0.13 160);
+  --chart-3: oklch(0.70 0.14 75);
+  --chart-4: oklch(0.42 0.14 280);
+  --chart-5: oklch(0.55 0.20 25);
+
+  /* ── Avatar — paleta decorativa (8 cores) ─────────────────────── */
+  --avatar-1: #14B8A6;  /* teal-500 */
+  --avatar-2: #8B5CF6;  /* violet-500 */
+  --avatar-3: #F59E0B;  /* amber-500 */
+  --avatar-4: #EC4899;  /* pink-500 */
+  --avatar-5: #3B82F6;  /* blue-500 */
+  --avatar-6: #F43F5E;  /* rose-500 */
+  --avatar-7: #6366F1;  /* indigo-500 */
+  --avatar-8: #10B981;  /* emerald-500 */
+}
+
+.dark {
+  /* ═══════════════════════════════════════════════════════════════════════════
+     Identidade Editorial OptoMax — Dark Mode
+     Consolidado da V2 (Fase 10 cleanup)
+     ═══════════════════════════════════════════════════════════════════════════ */
+  color-scheme: dark;
+
+  /* ── shadcn semânticos — dark ─────────────────────────────────── */
+  --background:           oklch(0.16 0.008 80);
+  --foreground:           oklch(0.94 0.005 80);
+  --card:                 oklch(0.20 0.008 80);
+  --card-foreground:      oklch(0.94 0.005 80);
+  --popover:              oklch(0.22 0.008 80);
+  --popover-foreground:   oklch(0.94 0.005 80);
+  --primary:              oklch(0.60 0.15 280);
+  --primary-foreground:   oklch(0.14 0.008 80);
+  --primary-hover:        oklch(0.65 0.15 280);
+  --primary-subtle:       oklch(0.22 0.04 280);
+  --primary-subtle-foreground: oklch(0.70 0.12 280);
+  --secondary:            oklch(0.25 0.008 80);
+  --secondary-foreground: oklch(0.92 0.005 80);
+  --muted:                oklch(0.24 0.008 80);
+  --muted-foreground:     oklch(0.65 0.008 80);
+  --accent:               oklch(0.75 0.12 80);
+  --accent-foreground:    oklch(0.14 0.008 80);
+  --destructive:          oklch(0.62 0.20 25);
+  --destructive-foreground: oklch(0.98 0.005 80);
+  --border:               oklch(0.28 0.008 80);
+  --input:                oklch(0.30 0.008 80);
+  --ring:                 oklch(0.65 0.15 280);
+
+  /* ── Status clínicos — dark ───────────────────────────────────── */
+  --status-ok:            oklch(0.70 0.15 160);
+  --status-warning:       oklch(0.68 0.10 75);   /* antes 0.78/0.15 — reduz brilho e saturação */
+  --status-critical:      oklch(0.65 0.20 25);
+  --status-pending:       oklch(0.70 0.02 270);
+  --status-info:          oklch(0.70 0.14 230);
+
+  /* ── Status backgrounds sutis — dark ──────────────────────────── */
+  --status-ok-bg:         oklch(0.26 0.04 160);
+  --status-warning-bg:    oklch(0.24 0.03 75);   /* antes 0.27/0.05 — mais escuro e sutil */
+  --status-critical-bg:   oklch(0.27 0.05 25);
+  --status-pending-bg:    oklch(0.25 0.01 270);
+  --status-info-bg:       oklch(0.25 0.04 230);
+
+  /* ── Destructive background (igual a status-critical-bg) ──────── */
+  --destructive-bg:       oklch(0.27 0.05 25);
+
+  /* ── Status de agenda — dark ──────────────────────────────────── */
+  --agenda-agendado:      oklch(0.72 0.14 230);
+  --agenda-confirmado:    oklch(0.70 0.15 160);
+  --agenda-em-andamento:  oklch(0.65 0.16 280);
+  --agenda-concluido:     oklch(0.68 0.02 270);
+  --agenda-cancelado:     oklch(0.65 0.20 25);
+  --agenda-faltou:        oklch(0.78 0.15 75);
+
+  /* ── Shadows — dark ───────────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.06), 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-md: 0 4px 6px oklch(0 0 0 / 0.5);
+  --shadow-lg: 0 10px 15px oklch(0 0 0 / 0.6);
+  --shadow-xl: 0 20px 25px oklch(0 0 0 / 0.7);
+
+  /* ── Sidebar — dark ───────────────────────────────────────────── */
+  --sidebar:                 oklch(0.14 0.008 80);
+  --sidebar-foreground:      oklch(0.94 0.005 80);
+  --sidebar-primary:         oklch(0.60 0.15 280);
+  --sidebar-primary-foreground: oklch(0.14 0.008 80);
+  --sidebar-accent:          oklch(0.22 0.04 280);
+  --sidebar-accent-foreground: oklch(0.70 0.12 280);
+  --sidebar-border:          oklch(0.28 0.008 80);
+  --sidebar-ring:            oklch(0.65 0.15 280);
+
+  /* ── Charts — dark ────────────────────────────────────────────── */
+  --chart-1: oklch(0.70 0.14 230);
+  --chart-2: oklch(0.70 0.15 160);
+  --chart-3: oklch(0.78 0.15 75);
+  --chart-4: oklch(0.65 0.16 280);
+  --chart-5: oklch(0.65 0.20 25);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-size: 14px;
+    font-feature-settings: "cv11", "ss01", "ss03";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html {
+    @apply font-sans;
+  }
+
+  /* Tailwind v4 removeu o cursor:pointer automático de <button>.
+     Restaura o ponteiro em tudo que é clicável/interativo, e mostra
+     not-allowed no que está desabilitado. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"]:not([aria-disabled="true"]),
+  [role="menuitem"]:not([aria-disabled="true"]),
+  [role="option"]:not([aria-disabled="true"]),
+  [role="switch"]:not([aria-disabled="true"]),
+  [role="checkbox"]:not([aria-disabled="true"]),
+  [role="radio"]:not([aria-disabled="true"]),
+  a[href],
+  label[for],
+  summary,
+  select:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Component Overrides — Identidade Editorial
+   Aplicam em toda a aplicação (consolidado Fase 10 cleanup)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@layer components {
+  /* ── Button overrides ───────────────────────────────────────────
+     DESIGN.md: hover primary → opacity-90 (não bg-primary-hover)
+     DESIGN.md: focus ring-2 + offset
+  */
+  [data-slot="button"]:not([class*="destructive"]):not([class*="ghost"]):not([class*="link"]):hover {
+    opacity: 0.9;
+  }
+  [data-slot="button"]:focus-visible {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-color: var(--background);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  /* ── Card overrides ─────────────────────────────────────────────
+     DESIGN.md: rounded-lg + border + shadow-xs
+     DESIGN.md: p-6 default
+  */
+  [data-slot="card"] {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xs);
+    padding: 1.5rem; /* p-6 */
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    border: 1px solid var(--border);
+  }
+  [data-slot="card"][data-size="sm"] {
+    padding: 1rem; /* p-4 */
+  }
+
+  /* ── CardTitle overrides ────────────────────────────────────────
+     DESIGN.md: Inter font-semibold
+  */
+  [data-slot="card-title"] {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  /* ── Input overrides ────────────────────────────────────────────
+     DESIGN.md: px-3 py-2, ring-2, placeholder/60
+  */
+  [data-slot="input"] {
+    padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  }
+  [data-slot="input"]:focus-visible {
+    --tw-ring-offset-width: 0;
+    --tw-ring-shadow: 0 0 0 2px var(--ring);
+    border-color: transparent;
+  }
+  [data-slot="input"]::placeholder {
+    opacity: 0.6;
+  }
+
+  /* ── Table overrides ────────────────────────────────────────────
+     DESIGN.md: TableHead text-xs uppercase tracking-wide
+     DESIGN.md: TableCell py-3 px-4
+  */
+  [data-slot="table-head"] {
+    font-size: 0.75rem; /* text-xs */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* tracking-wide */
+    color: var(--muted-foreground);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  [data-slot="table-cell"] {
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+  }
+
+  /* ── Checkbox overrides ─────────────────────────────────────────
+     DESIGN.md: focus ring-2 + offset
+  */
+  [data-slot="checkbox"]:focus-visible {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-color: var(--background);
+    --tw-ring-shadow: 0 0 0 2px var(--ring);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  /* ── Radio overrides ────────────────────────────────────────────
+     DESIGN.md: focus ring-2 + offset
+  */
+  [data-slot="radio-group-item"]:focus-visible {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-color: var(--background);
+    --tw-ring-shadow: 0 0 0 2px var(--ring);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  /* ── Select overrides ───────────────────────────────────────────
+     DESIGN.md: Trigger h-9, px-3, ring-2 no focus
+     DESIGN.md: Item hover bg-muted
+  */
+  [data-slot="select-trigger"] {
+    height: 2.25rem; /* h-9 */
+    padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  }
+  [data-slot="select-trigger"]:focus-visible {
+    --tw-ring-offset-width: 0;
+    --tw-ring-shadow: 0 0 0 2px var(--ring);
+    border-color: transparent;
+  }
+  [data-slot="select-item"]:focus {
+    background-color: var(--muted);
+    color: var(--foreground);
+  }
+
+  /* ── Textarea overrides ─────────────────────────────────────────
+     DESIGN.md: px-3 py-2, ring-2, placeholder/60
+  */
+  [data-slot="textarea"] {
+    padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  }
+  [data-slot="textarea"]:focus-visible {
+    --tw-ring-offset-width: 0;
+    --tw-ring-shadow: 0 0 0 2px var(--ring);
+    border-color: transparent;
+  }
+  [data-slot="textarea"]::placeholder {
+    opacity: 0.6;
+  }
+
+  /* ── Label overrides ────────────────────────────────────────────
+     DESIGN.md: font-sans Inter, text-foreground
+  */
+  [data-slot="label"] {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    color: var(--foreground);
+  }
+
+  /* ── Dialog overrides ───────────────────────────────────────────
+     DESIGN.md: Overlay bg-black/50 sem blur
+     DESIGN.md: Content shadow-lg, rounded-lg, p-6
+  */
+  [data-slot="dialog-overlay"] {
+    background-color: oklch(0 0 0 / 0.5);
+    backdrop-filter: none;
+  }
+  [data-slot="dialog-content"] {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 1.5rem; /* p-6 */
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    transition-duration: var(--motion-slow);
+  }
+
+  /* ── Sheet overrides ────────────────────────────────────────────
+     DESIGN.md: shadow-lg, bg-card, sem blur
+  */
+  [data-slot="sheet-overlay"] {
+    background-color: oklch(0 0 0 / 0.5);
+    backdrop-filter: none;
+  }
+  [data-slot="sheet-content"] {
+    background-color: var(--card);
+    box-shadow: var(--shadow-lg);
+    transition-duration: var(--motion-slow);
+  }
+
+  /* ── DropdownMenu overrides ─────────────────────────────────────
+     DESIGN.md: shadow-md, rounded-md
+     DESIGN.md: Item hover bg-muted
+  */
+  [data-slot="dropdown-menu-content"] {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    animation-duration: var(--motion-base);
+  }
+  [data-slot="dropdown-menu-item"]:focus {
+    background-color: var(--muted);
+    color: var(--foreground);
+  }
+  [data-slot="dropdown-menu-sub-trigger"]:focus,
+  [data-slot="dropdown-menu-sub-trigger"][data-popup-open],
+  [data-slot="dropdown-menu-sub-trigger"][data-open] {
+    background-color: var(--muted);
+    color: var(--foreground);
+  }
+  [data-slot="dropdown-menu-checkbox-item"]:focus,
+  [data-slot="dropdown-menu-radio-item"]:focus {
+    background-color: var(--muted);
+    color: var(--foreground);
+  }
+
+  /* ── Tooltip overrides ──────────────────────────────────────────
+     DESIGN.md: px-2 py-1, motion-base
+  */
+  [data-slot="tooltip-content"] {
+    padding: 0.25rem 0.5rem; /* py-1 px-2 */
+    animation-duration: var(--motion-base);
+  }
+
+  /* ── Tabs overrides ─────────────────────────────────────────────
+     DESIGN.md: Segmented control sutil
+  */
+  [data-slot="tabs-list"][data-variant="default"] {
+    background-color: color-mix(in oklch, var(--muted) 50%, transparent);
+    border-radius: var(--radius-md);
+    padding: 3px;
+  }
+  [data-slot="tabs-trigger"] {
+    color: var(--muted-foreground);
+    transition-duration: var(--motion-fast);
+  }
+  [data-slot="tabs-trigger"][data-active] {
+    background-color: var(--card);
+    color: var(--foreground);
+    box-shadow: var(--shadow-xs);
+  }
+
+  /* ── Skeleton overrides ─────────────────────────────────────────
+     DESIGN.md: Pulse 1.5s
+  */
+  [data-slot="skeleton"] {
+    animation-duration: 1.5s;
+  }
+
+  /* ── Sonner/Toast overrides ─────────────────────────────────────
+     DESIGN.md: shadow-xl
+  */
+  .cn-toast {
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* ── Avatar overrides ───────────────────────────────────────────
+     DESIGN.md: Fallback fundo color-mix primary/card
+  */
+  [data-slot="avatar-fallback"] {
+    background-color: color-mix(in oklch, var(--primary) 16%, var(--card));
+    color: var(--primary);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     Tipografia canonica — DESIGN.md secao 3
+     Classes utilitarias semanticas pra hierarquia consistente em todo o app.
+     ═══════════════════════════════════════════════════════════════════════════ */
+
+  /* Titulo hero de pagina principal (dashboard, landing) */
+  .text-page-hero {
+    font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
+    font-size: 2rem;         /* 32px text-3xl */
+    line-height: 2.25rem;    /* 36px */
+    letter-spacing: -0.02em; /* tracking-tight */
+    font-weight: 400;
+  }
+
+  /* Titulo padrao de pagina (H1) */
+  .text-page-title {
+    font-family: var(--font-instrument-serif), ui-serif, Georgia, serif;
+    font-size: 1.625rem;     /* 26px ~text-2xl */
+    line-height: 2rem;       /* 32px */
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  /* Titulo de secao dentro de pagina (H2 funcional) */
+  .text-section-title {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 1rem;         /* 16px text-base */
+    line-height: 1.5rem;
+    font-weight: 600;        /* semibold */
+  }
+
+  /* Titulo de card ou subsecao (H3 denso) */
+  .text-card-title {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 0.875rem;     /* 14px text-sm */
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+
+  /* Eyebrow/label uppercase (cabeçalho de tabela, KPI label, breadcrumb) */
+  .text-eyebrow {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 0.75rem;      /* 12px text-xs */
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;  /* tracking-wide */
+    font-weight: 500;        /* medium */
+    color: var(--muted-foreground);
+  }
+
+  /* Meta-info padrao (subtitulo, helper, descricao) */
+  .text-meta {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 0.875rem;     /* 14px text-sm */
+    line-height: 1.25rem;
+    color: var(--muted-foreground);
+  }
+
+  /* Meta-info menor (footer, hint, timestamp) */
+  .text-meta-xs {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 0.75rem;      /* 12px text-xs */
+    line-height: 1rem;
+    color: var(--muted-foreground);
+  }
+}
